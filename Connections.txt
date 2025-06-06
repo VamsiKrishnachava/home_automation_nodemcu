@@ -1,0 +1,38 @@
+Node Mcu - Relay
+
+| Appliance        | GPIO Pin | NodeMCU Pin | Relay IN Pin |
+| ---------------- | -------- | ----------- | ------------ |
+| **Light**        | GPIO5    | D1          | IN1          |
+| **Fan**          | GPIO4    | D2          | IN2          |
+| **Geyser**       | GPIO0    | D3          | IN3          |
+| **Charger**      | GPIO2    | D4          | IN4          |
+| **DHT11 Sensor** | GPIO14   | D5          | Data         |
+
+
+Sample relay connection
+
+| Pin     | Connect To                   |
+| ------- | ---------------------------- |
+| IN1–IN4 | NodeMCU D1–D4 respectively   |
+| VCC     | **5V supply**                |
+| GND     | Shared GND (NodeMCU + power) |
+
+
+DHT11 Temperature Sensor
+
+| DHT11 Pin  | Connect To                         |
+| ---------- | ---------------------------------- |
+| VCC        | NodeMCU 3.3V or 5V                 |
+| GND        | NodeMCU GND                        |
+| DATA       | NodeMCU **D5** (GPIO14)            |
+| (Optional) | 10kΩ resistor between VCC and DATA |
+
+
+AC to relay
+
+| Relay Terminal               | Connect To                               |
+| ---------------------------- | ---------------------------------------- |
+| **COM** Ideally middle pin   | AC Live wire                             |
+| **NO**                       | One terminal of device (fan, bulb, etc.) |
+| **Other terminal of device** | AC Neutral                               |
+
